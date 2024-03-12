@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <div class="headflexbox">
+        <div class="hf1">
+            <div class="hlogo" ><a href="/home"><img class="hlogoimg" src="/HabitzoneImage/hee.png" alt=""></a></div>
+        </div>
+        <div class="hf2">
+            <a href="/course-status"><div class="headinfo"><span class="material-symbols-outlined">school</span><p>ห้องเรียน</p></div></a>
+            <a href="/all-course/page/1"><div class="headinfo"><span class="material-symbols-outlined">menu_book</span><p>คอร์สเรียน</p></div></a>
+            <a href="/about-us"><div class="headinfo" ><span class="material-symbols-outlined">group</span><p>รู้จักกับติวเตอร์</p></div></a>
+            <a href="/confirm-payment"><div class="headinfo" ><span class="material-symbols-outlined">payments</span><p>แจ้งชำระเงิน</p></div></a>
+            <a href="/quiz-docs"><div class="headinfo" ><span class="material-symbols-outlined">description</span><p>คลังข้อสอบ</p></div></a>
+
+        </div>
+        <div class="hf3">
+            <% if(login){ %> 
+                <div class="loginsuccess">
+                    <img class='loginimage' src="/HabitzoneImage/gura.jpg" alt="">
+                    <p><%= userinfo[0] %></p>
+                    <span class="material-symbols-outlined">arrow_drop_down</span>
+                </div>
+
+            <% }else { %>
+                <button id="btnopenlogin" class="hlogin">เข้าสู่ระบบ</button>
+                <button class="hregister"><a href="/register">ลงทะเบียน</a> </button>
+            <% }%>
+            
+        </div>
+    </div>
+    <% if(login){ %> 
+        <div class="profileoverview">
+            <div class="povd1"></div>
+            <div class="povd2"></div>
+            <div id='profid' class="povd32">
+                <div class="profile">
+                    <img class='loginimage2' src="/HabitzoneImage/gura.jpg" alt="">
+                    <div>
+                        <p class="phead"><%= userinfo[2] %></p>
+                        <p><%= userinfo[0] %> <%= userinfo[1] %></p>
+                        <p><a href="/logout">Logout<span class="material-symbols-outlined">power_settings_new</span></a></p>
+                    </div>
+                </div>
+                <div class="profilebtn">
+                    <div><a href="/classroom"><span class="material-symbols-outlined">account_circle</span>ดูโปรไฟล์</a></div>
+                    <div><a href="/classroom"><span class="material-symbols-outlined">auto_stories</span>ห้องเรียนของฉัน</a></div>
+                </div>
+            </div>
+        </div>
+    <% }else { %>
+        
+    <% }%>
+    
+    <script src="/js/navbar.js"></script>
+
+
+

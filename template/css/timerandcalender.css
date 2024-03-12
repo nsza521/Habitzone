@@ -1,0 +1,240 @@
+.box-pomodoro-and-calender{
+    width: 900px;
+    /* border:black 1px solid; */
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+.calender{
+    width: 380px;
+    height: 330px;
+    position: relative;
+    top:100px;
+    background-color: rgba(228, 228, 228, 0.658);
+    box-shadow: 0.5px 0.5px 5px  rgb(179, 179, 179),-0.5px -0.5px 3px  rgba(228, 228, 228, 0.658);
+    border-radius: 5px;
+    -webkit-user-select: none;
+    z-index: 2;
+}
+.headcalender{
+    width: 100%;
+    height: 80px;
+}
+.dday{
+    width: 100%;
+    height: 25px;
+    display:flex;
+    justify-content: space-around;
+    font-size: 13px;
+}
+.monthandyear{
+    width: 100%;
+    height: 55px;
+    display: flex;
+}
+.m-y{
+    flex:2;
+    height: 55px;
+    padding-left:15px ;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.switchmonthbutton{
+    flex:1;
+    height: 55px;
+    padding-top: 15px;
+    padding-left: 150px;
+}
+.leftbtnc{
+    background:none;
+    border: none;
+}
+.leftbtnc:hover{
+    color: gray;
+}
+.rightbtnc{
+    background:none;
+    border: none;
+}
+.rightbtnc:hover{
+    color: gray;
+
+}
+.bodycalender{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.datediv{
+    width: 54.2px;
+    height: 50px;
+    margin:0px 0px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;
+    /* margin: 2px 0px; */
+    /* background-color: #f85d090e; */
+    position: relative;
+    /* top:2px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+}
+.datediv:hover{
+    background-color: rgba(128, 128, 128, 0.123);
+}
+.datediv div{
+    opacity: 0;
+}
+#showdatediv{
+    font-size: 10px;
+    opacity: 1;
+    color:rgb(255, 255, 255);
+    background-color:#f85d09af;
+    border-radius: 10px;
+    width: 80%;
+    margin-top: 3px;
+
+
+}
+/* ------------------------------------------------------------------- */
+
+.timerbox{
+    width: 500px;
+    height: 330px;
+    position: relative;
+    top:100px;
+    -webkit-user-select: none;
+
+}
+
+.box2time{
+    width: 500px;
+    height: 160px;
+    display:flex;
+}
+
+/* ------------------------------------------------------------------- */
+
+.focustime{
+    flex :1;
+    height: 130px;
+    margin: 10px;
+    background-color: rgba(228, 228, 228, 0.658);
+    box-shadow: 0.5px 0.5px 5px  rgb(179, 179, 179),-0.5px -0.5px 3px  rgba(228, 228, 228, 0.658);
+    border-radius: 5px;
+
+}
+.focustime #p1{
+    color: #F85E09;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+.focustime #p2{
+    color:#000000;
+    font-size: 30px;
+    text-align: center;
+}
+/* ------------------------------------------------------------------- */
+
+.studytime{
+    flex:1;
+    height: 130px;
+    margin: 10px;
+    background-color: rgba(228, 228, 228, 0.658);
+    box-shadow: 0.5px 0.5px 5px  rgb(179, 179, 179),-0.5px -0.5px 3px  rgba(228, 228, 228, 0.658);
+    border-radius: 5px;
+
+}
+.studytime #p3{
+    color: #F85E09;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+.studytime #p4{
+    color:#000000;
+    font-size: 30px;
+    text-align: center;
+}
+/* ------------------------------------------------------------------- */
+.iconandname{
+    height: 140px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    
+}
+.icon{
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    background-color: rgba(228, 228, 228, 0.438);
+    box-shadow: 0.5px 0.5px 5px  rgb(179, 179, 179),-0.5px -0.5px 3px  rgba(228, 228, 228, 0.658);
+    border-radius: 5px;
+
+}
+/* -------------------------------------------------------------------- */
+.info-static{
+    width: 200px;
+    height: 120px;
+    margin: 10px;
+    background-color: rgba(228, 228, 228, 0.438);
+    box-shadow: 0.5px 0.5px 5px  rgb(179, 179, 179),-0.5px -0.5px 3px  rgba(228, 228, 228, 0.658);
+    border-radius: 5px;
+    
+}
+.infobox{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.info{
+    background-color: #F85E09;
+    height: 100%;
+    width: 11%;
+    opacity: 0.85;
+
+}
+#info-2{
+    height: 35%;
+    margin-top:65px;
+}
+#info-1{
+    height: 42%;
+    margin-top:58px;
+    background-color: #ff2d2d;
+}   
+#info-today{
+    height: 17%;
+    margin-top:83px;
+}
+#infoplus1{
+    height: 8%;
+    margin-top:92px;
+}
+#infoplus2{
+    height: 70%;
+    margin-top:30px;
+    background-color: #ec0000;
+
+}
+.dateinfo{
+    width: 100%;
+    height: 22px;
+    display: flex;
+    justify-content: space-around;
+}
+.date{
+    font-size: 11px;
+    margin-top: 2px;
+    height: 17px;
+    color: #8b8b8b;
+
+}
+/* -------------------------------------------------------------------- */
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHabitZone</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/HabitzoneImage/gura.jpg">
+</head>
+<body>
+
+    <%-include("navbar")%>
+
+    <div class="headflexbox2">
+        <a class="stylelink-sub" href="/home"><div class="item" id="i1">หน้าแรก</div></a>
+        <a class="stylelink-sub" href="#math"><div class="item" id="i2">คณิตศาสตร์</div></a>
+        <a class="stylelink-sub" href="#physic"><div class="item" id="i3">ฟิสิกส์</div></a>
+        <a class="stylelink-sub" href="#chemistry"><div class="item" id="i4">เคมี</div></a>
+        <a class="stylelink-sub" href="#tgat"><div class="item" id="i5">TGAT</div></a>
+        <a class="stylelink-sub" href="#tpat"><div class="item" id="i5">TPAT</div></a>
+    </div>
+
+    <div class="idontknowhowtodojustwanttojustify">
+        <div class="slideimg">
+            <img class='img1' id='simg1' src="/HabitzoneImage/a444.jpg" alt="">
+            <img class='img2' id='simg2'src="/HabitzoneImage/a1b.png" alt="">
+            <img class='img3' id='simg3'src="/HabitzoneImage/a1c.jpg" alt="">
+        </div>
+    </div>
+    <script src="/js/slideimage.js"></script>
+    <div class="recommend">
+        แนะนำคอร์สเรียนสำหรับน้องๆ &nbsp;พร้อมลุยไปด้วยกัน &nbsp;
+        <img class='fire'src="/Habitzoneimage/fire.png" alt=""> 
+    </div>
+    <div class="recommend2">
+        <a href="/all-course/page/1">ดูคอร์สเรียนทั้งหมด&nbsp;&nbsp;<span class="material-symbols-outlined">east</span></a>
+    </div>
+    <% Object.values(pdm).forEach(function(item){ %>
+        <div class="coutboxhead">
+            <div class="para" id="popular"><h2><%= item.name %></h2></div>
+        </div>
+        <div class="coutbox">
+            <div class="cbox" >
+                <div class="cbr1">
+                    <div class="cbr1-picture">
+                        <img class="cimgmain" src="/HabitzoneImage/g.jpg" alt="">
+                    </div>
+                    <p class="unfill"><span class="material-symbols-outlined">favorite</span></p>
+                    <div class="contentincourse">
+                        <p class="namecourse"><%=item.course1.namec1%></p>
+                        <div class="teachercourse"><img src="/HabitzoneImage/gura.jpg" alt=""><p><%=item.course1.teacher%></p></div>
+                        <div class="hours"><span class="material-symbols-outlined">timer</span><p><%=item.course1.hr%> ชั่วโมง (ชม.เรียน 2 เท่า)</p></div>
+                        <div class="pricecourse"><p>฿</p><p class="integer"><%=item.course1.price%>.00</p></div>
+                        <div class="coursebtn">
+                            <a class="detailacbtn" href="/product/<%=item.path%>"><button>ดูรายละเอียด</button></a>
+                            <a href="/addproduct/<%=item.courseid%>">
+                                <div class="cartac"><span class="material-symbols-outlined">shopping_cart</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cbr1">
+                    <div class="cbr1-picture">
+                        <img class="cimgmain" src="/HabitzoneImage/e.jpg" alt="">
+                    </div>
+                    <p class="unfill"><span class="material-symbols-outlined">favorite</span></p>
+                    <div class="contentincourse">
+                        <p class="namecourse"><%=item.course2.namec2%></p>
+                        <div class="teachercourse"><img src="/HabitzoneImage/gura.jpg" alt=""><p><%=item.course2.teacher%></p></div>
+                        <div class="hours"><span class="material-symbols-outlined">timer</span><p><%=item.course2.hr%> ชั่วโมง (ชม.เรียน 2 เท่า)</p></div>
+                        <div class="pricecourse"><p>฿</p><p class="integer"><%=item.course2.price%>.00</p></div>
+                        <div class="coursebtn">
+                            <a class="detailacbtn" href="/product/<%=item.path%>"><button>ดูรายละเอียด</button></a>
+                            <a href="/addproduct/<%=item.courseid%>">
+                                <div class="cartac"><span class="material-symbols-outlined">shopping_cart</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cbr1">
+                    <div class="cbr1-picture">
+                        <img class="cimgmain" src="/HabitzoneImage/a.jpg" alt="">
+                    </div>
+                    <p class="unfill"><span class="material-symbols-outlined">favorite</span></p>
+                    <div class="contentincourse">
+                        <p class="namecourse"><%=item.course3.namec3%></p>
+                        <div class="teachercourse"><img src="/HabitzoneImage/gura.jpg" alt=""><p><%=item.course3.teacher%></p></div>
+                        <div class="hours"><span class="material-symbols-outlined">timer</span><p><%=item.course3.hr%> ชั่วโมง (ชม.เรียน 2 เท่า)</p></div>
+                        <div class="pricecourse"><p>฿</p><p class="integer"><%=item.course3.price%>.00</p></div>
+                        <div class="coursebtn">
+                            <a class="detailacbtn" href="/product/<%=item.course3.path%>"><button>ดูรายละเอียด</button></a>
+                            <a href="/addproduct/<%=item.courseid%>">
+                                <div class="cartac"><span class="material-symbols-outlined">shopping_cart</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cbr1">
+                    <div class="cbr1-picture">
+                        <img class="cimgmain" src="/HabitzoneImage/c.jpg" alt="">
+                    </div>
+                    <p class="unfill"><span class="material-symbols-outlined">favorite</span></p>
+                    <div class="contentincourse">
+                        <p class="namecourse"><%=item.course4.namec4%></p>
+                        <div class="teachercourse"><img src="/HabitzoneImage/gura.jpg" alt=""><p><%=item.course4.teacher%></p></div>
+                        <div class="hours"><span class="material-symbols-outlined">timer</span><p><%=item.course4.hr%> ชั่วโมง (ชม.เรียน 2 เท่า)</p></div>
+                        <div class="pricecourse"><p>฿</p><p class="integer"><%=item.course4.price%>.00</p></div>
+                        <div class="coursebtn">
+                            <a class="detailacbtn" href="/product/<%=item.course4.path%>"><button>ดูรายละเอียด</button></a>
+                            <a href="/addproduct/<%=item.course4.courseid%>">
+                                <div class="cartac"><span class="material-symbols-outlined">shopping_cart</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="<%= item.course4.divid%>"></div>
+    <% }) %>
+
+    <%-include("loginbox")%>
+
+    <div class="conT">
+        เสียงตอบรับจากผู้ใช้งานจริง
+    </div>
+    
+    <%-include("footer")%>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="/css/loginboxandcart.css">
+<div class="loginbox2">
+    <form action="/getlogininfo" method="post">
+        <div class="headinloginbox">เข้าสู่ระบบ</div>
+            <div id="usermargin"class="labellogin">Username/เบอร์โทรศัพท์</div>
+            <input  class="inputusername" id='inputusername1'type="text" placeholder="Username/เบอร์โทรศัพท์" name="usernamelogin">
+            <p class="headinloginboxP" id="loginboxP1">*กรุณาระบุUsername</p>
+            
+            <div class="labellogin">รหัสผ่าน</div>
+            <input  class="inputpassword" id='inputusername2'type="password" placeholder="Password" name="passwordlogin">
+            <p class="headinloginboxP" id="loginboxP2">*กรุณาระบุPassword</p>
+
+            <button type="button"class="buttonhideshow">
+                <img class="eye"width="21px"src="/HabitzoneImage/eye-regular (1).svg" alt="">
+            </button>
+            <button type="button" class="buttonhideshow2">
+                <img class="eyehd"width="22px" src="/HabitzoneImage/eye-slash-regular.svg" alt="">
+            </button>
+
+            <a href="#" class="linkforgot"><div class="forgotpassword">ลืมรหัสผ่าน?</div></a>
+            <button class="submitlogin"type="submit">เข้าสู่ระบบ</button>
+            <div class="orrr">หรือ</div>
+            <div class="loginwithgogle"type="submit">
+                <div class="loginwithgogle2">
+                    <div>
+                        <img class="goguy"src="/HabitzoneImage/Google__G__Logo.svg.png" alt="">
+                    </div>
+                    <div>
+                        เข้าสู่ระบบด้วยGoogle
+                    </div>
+                </div>
+            </div>
+            <div class="noaccount">ยังไม่มีบัญชี? <a href="/register" class="noaccountnoline">ลงทะเบียน</a> </div>
+            <div id='btncloselogin'class="exitloginbutton">&times;</div>
+        </div>
+    </form>
+    
+<div class="overlaynoactive"></div>
+
+
+
+<div class="contract">
+    <a href=""><img class="logocontract" src="/HabitzoneImage/unnamed.png" alt=""></a>
+    <a href="https://www.instagram.com/pakornboonkasem/"><img class="logocontract" src="/HabitzoneImage/Instagram_logo_2022.svg.png" alt=""></a>
+    <a href="https://www.facebook.com/pakorn.boonkasem.9/"><img class="logocontract" src="/HabitzoneImage/fb_icon_325x325.png" alt=""></a>
+</div>
+
+<div id="btnopenbasket"  class="cartout">
+    <img class="cart" src="/HabitzoneImage/blue_shoppictbasket_1484336511-1.png" alt="">
+</div>
+
+
+<div class="cartleftnoactive">
+    <div class="headtakla">
+        <div class="closebtncart"><span id="closebtn2" class="material-symbols-outlined">close</span></div>
+        <div>
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <p>ตะกร้าสินค้า</p>
+        </div>
+    </div>
+    <div class="bodytakla">
+        <% if(login){ %> 
+            <% if(!(userinfo[4])){ %> 
+                <% Object.values(userinfo[3]).forEach(function(item){ %>
+                    <div class="courseintakla">
+                        <img class="imgtakla" src="/HabitzoneImage/gura.jpg" alt="">
+                        <div class="detail">
+                            <p><%=item.name%></p>
+                            <div class="sensei"><img src="/HabitzoneImage/gura.jpg" alt=""><p><%=item.teacher%></p></div>
+                            <span>฿<span class="price"><%=item.price%>.00</span></span>
+                        </div>
+                        <a href="/delete/<%=item.courseid%>"><span id='bin' class="material-symbols-outlined">delete</span></a>
+                    </div>
+                <% }) %>
+            <% }else { %>
+                <div class="bodytaklacontent">
+                    <img src="/HabitzoneImage/gura3.jpg" alt="">
+                    <p id="btkp1">ยังไม่มีคอร์สเรียนในตะกร้าสินค้า </p>
+                    <p id="btkp2">เพิ่มคอร์สเรียน <span>เข้ามาในตะกร้าสินค้าของคุณ</span></p>
+                    <a href="/all-course/page/1"><button>ค้นหาคอร์สเรียน</button></a>
+                </div>
+            <% }%>
+        <% }else { %>
+            <div class="bodytaklacontent">
+                <img src="/HabitzoneImage/gura3.jpg" alt="">
+                <p id="btkp1">ยังไม่มีคอร์สเรียนในตะกร้าสินค้า </p>
+                <p id="btkp2">ล็อกอิน หรือ เพิ่มคอร์สเรียน <span>เข้ามาในตะกร้าสินค้าของคุณ</span></p>
+                <a href="/all-course/page/1"><button>ค้นหาคอร์สเรียน</button></a>
+            </div>
+        <% }%>
+    </div>
+    <div class="footertakla">
+        <p>รวมทั้งหมด : <span id="priceall"></span></p>
+        <a href="/confirm-payment"><button>ชำระเงิน</button></a>
+    </div>
+</div>
+
+<script  src="/js/loginbox.js">
+    
+</script>
+<script  src="/js/cart.js"></script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Online] คอร์สเรียนทั้งหมด</title>
+    <link rel="stylesheet" href="/css/allcourse.css">
+    <link rel="icon" href="/HabitzoneImage/gura.jpg">
+</head>
+<body>
+    <%-include("navbar")%>
+    
+    <hr class="hr">
+
+    <div class="COUTbox">
+        <div class="ALLCoursebox">
+            <div class="category">
+                <div class="cotsana">
+                    <img class="cotsanaimage" src="/HabitzoneImage/test.jpg" alt="">
+                </div>
+                <div style="font-size: larger;text-align: center;font-weight: 400;">Category</div>
+                <hr>
+                <div class="subjectAll">
+                    <div class="headsubject">หมวดหมู่</div>
+                    <a href="/course-for-dek67/page/1"><div class="subject">คอร์สแนะนำสำหรับDek67</div></a>
+                    <a href="/course-for-m5/page/1"><div class="subject">คอร์สสำหรับน้องๆ ม.5</div></a>
+                    <a href="/course-for-m4/page/1"><div class="subject">คอร์สสำหรับน้องๆ ม.4</div></a>
+                    <a href="/course-for-m123/page/1"><div class="subject">คอร์สสำหรับน้องๆ ม.ต้น</div></a>
+                </div><hr>
+                <div class="subjectAll">
+                    <div class="headsubject">วิชา</div>
+                    <a href="/subject-math/page/1"><div class="subject">คณิตศาสตร์</div></a>
+                    <a href="/subject-physic/page/1"><div class="subject">ฟิสิกส์</div></a>
+                    <a href="/subject-chemistry/page/1"><div class="subject">เคมี</div></a>
+                </div><hr>
+                <div class="subjectAll">
+                    <div class="headsubject">ประเภท</div>
+                    <a href="/type-tgat_tpat/page/1"><div class="subject">TGAT TPAT</div></a>
+                    <a href="/type-alevel/page/1"><div class="subject">A-Level</div></a>
+                    <a href="/type-mathMS/page/1"><div class="subject">คอร์สรวมเนื้อหาคณิตม.ต้น</div></a>
+                    <a href="/type-mathHS/page/1"><div class="subject">คอร์สรวมเนื้อหาคณิต ม.ปลาย</div></a>
+                    <a href="/type-chemistryHS/page/1"><div class="subject">คอร์สรวมเนื้อหาเคมี ม.ปลาย</div></a>
+                    <a href="/type-physicHS/page/1"><div class="subject">คอร์สรวมเนื้อหาฟิสิกส์ ม.ปลาย</div></a>
+                </div><hr>
+            </div>
+
+            <div class="coursecontent">
+                <div class="searchengine">
+                    <img src="/HabitzoneImage/search2.png" class="search"width="22px" alt="">
+                    <input class="searchinputbox" type="text" placeholder="ค้นหาคอร์สเรียน">
+                    <div>
+                        <select class="selection"name="selection" id="">
+                            <option value="">เรียงตามลำดับล่าสุด</option>
+                            <option value="">เรียงตามความนิยม</option>
+                            <option value="">เรียงตามราคา : ต่ำไปสูง</option>
+                            <option value="">เรียงตามราคา : สูงไปต่ำ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="coursecontentin">
+                    <% Object.values(product).forEach(function(item){ %>
+                        <div class="coursecontentinin">
+                            <div class="classcontentimg">
+                                <img src="/HabitzoneImage/a.jpg" alt="">
+                            </div>  
+                            <p class="unfill"><span class="material-symbols-outlined">favorite</span></p>
+                            <div class="contentincourse">
+                                <p class="namecourse"><%=item.name%></p>
+                                <div class="teachercourse"><img src="/HabitzoneImage/gura.jpg" alt=""><p><%=item.teacher%></p></div>
+                                <div class="hours"><span class="material-symbols-outlined">timer</span><p><%=item.hr%> ชั่วโมง (ชม.เรียน 2 เท่า)</p></div>
+                                <div class="pricecourse"><p>฿</p><p class="integer"><%=item.price%>.00</p></div>
+                                <div class="coursebtn">
+                                    <a class="detailacbtn" href="/product/<%=item.path%>"><button>ดูรายละเอียด</button></a>
+                                    <a href="/addproduct/<%=item.courseid%>">
+                                        <div class="cartac"><span class="material-symbols-outlined">shopping_cart</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    <% }) %>
+                       
+                </div>
+            <div class="page"> 
+                <div class="inpage">    
+                    <% let i = 0%>
+                    <% let page = 1%>
+                    <% Object.values(pageindex).forEach(function(item){ %>
+                        <% i++ %>
+                        <% if(i%18 == 1){%>
+                            <a href="/<%-path%>/page/<%-page%>"><div class="ininpage"><%-page%></div></a>
+                            <%page++%>
+                        <% } %>
+                    <% }) %>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <% if(login){%>
+        <% if(addproduct){%>
+            <%-include("addproductsuccess")%>
+        <% } %>
+    <% } %>
+
+    <%-include("loginbox")%>
+    
+    <%-include("footer")%>
+
+</body>
+</html>

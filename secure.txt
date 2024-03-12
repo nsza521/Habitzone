@@ -1,0 +1,29 @@
+In Node.JS application development, you‘ll find the most common types of attack are
+SQL Injection;
+Cross-site scripting (XSS);
+Brute force.
+
+SQL Injection Attacks
+An SQL injection attack is where an SQL query is ’injected‘ into your web app’s database. Once inside, the malicious code can read information and do damage.
+Essentially, attackers are trying to disguise malicious code as input data. A great way to prevent this is with prepared statements. Rather than building a statement with user input variables, you‘ll write out the SQL statement first, then add the user input. Using node-postgres it might look something like this:
+var q = ‘SELECT name FROM books WHERE id = $1’;
+client.query(q, [‘3’], function(err, result) {});
+A great tool for checking SQL injection vulnerabilities is sqlmap. They describe it as “an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws”. Use it on your application to check for any mistakes!
+
+
+Cross-Site Scripting Attacks (XSS)
+This type of attack has been around since the 90s and is now becoming a huge problem for developers. Cross-site scripting is another type of injection attack, which occurs when an attacker inputs malicious code into a legitimate website by exploiting user inputs.
+Think of a website where you can view other users profiles. Now, imagine one of the users has some malicious code in his username. If the site is poorly coded, when you view the profile it will read the username and actually run the malicious code!
+This type of attack is much more common that most web developers like to admit. Luckily, you can make it much more difficult for attackers with a few simple steps.
+Setting the correct HTTP headers is a good place to start. The headers you will need are
+Strict-Transport-Security
+X-Frame-Options
+X-XSS-Protection
+X-Content-Type-Options
+Content-Security-Policy
+In Node.JS, you can use the helmet module to set these. It‘s a collection of 11 modules that you can just drop into your app to boost security against this type of attack.
+Here‘s a basic set it up:
+var express = require(‘express’)
+var helmet = require(‘helmet’)
+var app = express()
+app.use(helmet())

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ห้องเรียน - StudyHabitZone</title>
+    <link rel="icon" href="/HabitzoneImage/gura.jpg">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+        }
+        .boxclassroom{
+            width: 100%;
+            min-height: 700px;
+            display: flex;
+        }
+        .class1{
+            flex:1;
+            border-right: 2px solid rgba(197, 197, 197, 0.514);
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            background-color: rgba(175, 175, 175, 0.1);
+
+        }
+        .class1 p{
+            border-radius:25px 0 0 25px;
+            width: 90%;
+            height: 65px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f56c22;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            box-shadow: -1px -1px 3px rgb(128, 128, 128);
+        }
+        .class1 div{
+            width: 75%;
+            height: 65px;
+            border-radius:25px 0 0 25px;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            background-color: #fa803e;
+            color: rgb(255, 255, 255);
+            box-shadow: -1px -1px 3px rgb(128, 128, 128);
+            position: relative;
+            left:0px;
+            transition: all 400ms;
+        }
+        .class1 .meow{
+            color: rgb(0, 0, 0);
+            position: relative;
+            left:25px;
+            background-color: #ff5900;
+            border-radius:25px 0px 25px 0;
+        }
+        .class1 .meow:hover{
+            left: 30px;
+        }
+        .class1 div:hover{
+            color: rgb(0, 0, 0);
+            position: relative;
+            left:25px;
+            background-color: #ff5900;
+            border-radius:25px 0px 25px 0;
+        }
+        .class1 span{
+            font-size: 20px;
+            margin: 0 5px;
+        }
+        .class2{
+            flex:4;
+            background-color: rgba(175, 175, 175, 0.1);
+        }
+        .class2header{
+            width: 100%;
+            min-height: 100px;
+        }
+        .class2body{
+            width: 100%;
+            min-height: 500px;
+            display: flex;
+            justify-content: center ;
+        }
+        .class2inbody{
+            width: 82%;
+            min-height: 500px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .coursecontentinin{
+            width:270px;
+            margin:12px 9px;
+            height: 350px;
+            border: 1px black solid;
+            border-radius: 4px;
+            position: relative;
+            bottom:0px;
+            transition: width 2s ease-in 3s,bottom 150ms;
+        }
+        .coursecontentinin:hover{
+            position: relative;
+            bottom: 7px;
+        }
+        .class3{
+            flex:1;
+            background-color: rgba(175, 175, 175, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <%-include("navbar")%>
+
+    <div class="boxclassroom">
+        <div class="class1">
+            <p>ยินดีต้อนรับเข้าสู่ห้องเรียน</p>
+            <div class="meow"><span class="material-symbols-outlined">library_books</span>คอร์สเรียนของฉัน</div>
+            <div><span class="material-symbols-outlined">equalizer</span>สถิติการเรียน</div>
+            <div><span class="material-symbols-outlined">contact_page</span>ข้อมูลส่วนตัว</div>
+            <div><span class="material-symbols-outlined">favorite</span>คอร์สเรียนที่ถูกใจ</div>
+        </div>
+        <div class="class2">
+            <div class="class2header">
+                <input type="search" placeholder="ค้นหาคอร์สเรียน">
+                <select name="sortitem" id="sort">
+                    <option value="saab">เรียงตามตัวอักษร</option>
+                    <option value="volvo">เรียงตามวันที่ซื้อล่าสุด</option>
+                    <option value="mercedes">เรียงตามคอร์สล่าสุด</option>
+                    <option value="mercedes">เรียงตามจำนวนชั่วโมง</option>
+                </select>
+                <div><span class="material-symbols-outlined">
+                    list
+                    </span></div>
+                    <div><span class="material-symbols-outlined">grid_view</span></div>
+            </div>
+            <div class="class2body">
+                <div class="class2inbody">
+                    <div class="coursecontentinin"></div>
+                    <div class="coursecontentinin"></div>
+                    <div class="coursecontentinin"></div>
+                    <div class="coursecontentinin"></div>
+                    <div class="coursecontentinin"></div>
+                    <div class="coursecontentinin"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="class3">
+        </div>
+        
+    </div>
+
+
+
+    <%-include("loginbox")%>
+    <%-include("footer")%>
+</body>
+</html>

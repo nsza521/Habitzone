@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ยืนยันการชำระเงิน - StudyHabitZone</title>
+    <link rel="icon" href="/HabitzoneImage/gura.jpg">
+    <style>
+        body{
+            background-color: rgba(168, 166, 166, 0.151);
+        }
+        .justify{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .detail-box-head{
+            width: 1200px;
+            min-height:20px ;
+            display:flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .justify .head{
+            flex:3;
+            display: flex;
+            margin:0 30px;
+        }
+        .justify .head-no{
+            display: flex;
+            flex:2;
+            margin:0 30px;
+        }
+        .justify .head #p1{
+            display: flex;
+            align-self: center;
+            width: 70%;
+            font-size: 23px;
+        }
+        .justify .head #p1 .sum{
+            font-size: 15px;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .justify .head #p2{
+            display: flex;
+            align-self: center;
+            width: 30%;
+            font-size: 15px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            color: #5495FF;
+        }
+        .justify .head .p2link{
+            color: #5495FF;
+            text-decoration: none;
+        }
+        .justify .head .p2link:hover{
+            text-decoration: underline;
+        }
+        .detail-box{
+            width: 1200px;
+            display:flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            margin-bottom: 60px;
+            min-height: 640px;
+        }
+        .order-detail{
+            flex:3;
+            margin:0 30px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+        }
+        .item-order{
+            width: 100%;
+            height: 160px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px dashed;
+        }
+        .item-order .img{
+            height: 80%;
+            aspect-ratio: 1 / 1;
+            border-radius: 10px;
+            box-shadow: 2px 2px 3px gray;
+        }
+        .item-order .img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .item-order .detail{
+            width: 70%;
+            height: 90%;
+        }
+        .ncourse{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            height: 40%;
+            max-height: 40%;
+        }
+        .ncourse a{
+            text-decoration: none;
+        }
+        #n1{
+            flex:9;
+            font-size: 15px;
+            padding-left: 10px;
+        }
+        #n2{
+            flex:1;
+            color: gray;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48;
+            display: flex;
+            justify-content: center;
+        }
+        #n2:hover{
+            color:#F85E09;
+        }
+        .detail-c-item{
+            height: 45%;
+            max-height: 45%;
+            display: flex;
+        }
+        .detA{
+            flex:7;
+            display: flex;
+            flex-direction: column;
+            font-size: 13px;
+            color: rgb(66, 66, 66);
+        }
+        .detAin{
+            display: flex;
+            align-items: center;
+            margin: 0 0 5px 15px;
+        }
+        .nbsp{
+            margin-left:7px ;
+        }
+        .detA img{
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+        }
+        #clock{
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 200,
+            'opsz' 48
+        }
+        .priceN{
+            flex:3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .payment-detail{
+            flex:2;
+            margin:0 30px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            border-radius: 5px;
+            justify-content: center;
+            height: 100%;
+        }
+        .inbox{
+            width: 90%;
+            background-color: rgb(255, 255, 255);
+        }
+        .pay{
+            font-size: 19px;
+            margin:10px 0 5px 0;
+        }
+        .order-detail-list{
+            min-height: 150px;
+        }
+        .payhead{
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-around;
+        }
+        .payheadcode{
+            display: flex;
+            font-size: 13px;
+            color:#3b3b3b
+        }
+        .payhead span{
+            width: 40%;
+            font-size: 14px;
+        }
+        .payhead .spann{
+            text-align: end;
+        }
+        .payhead2{
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-around;
+        }
+        .payhead2 .p2b1{
+            width: 60%;
+            font-size: 13px;
+            color:#3b3b3b
+        }
+        .payhead2 .p2b2{
+            width: 30%;
+            text-align: end;
+            font-size: 13px;
+            color:#3b3b3b
+        }
+        .margin{
+            margin-bottom: 15px;
+        }
+        .stycolor{
+            color:#F85E09
+        }
+        .stycolor2{
+            color:rgb(29,29,29)
+        }
+        .chead form{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .coupon{
+            border: 1px solid gray;
+            padding-left: 10px;
+            border-radius: 5px;
+            width: 250px;
+            height:35px;
+        }
+        .btncoupon2{
+            width: 90px;
+            border: none;
+            height:35px;
+            border-radius: 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+        }
+        .btncoupon2:hover{
+            text-decoration: underline;
+        }
+        .btncoupon2:active{
+            border:5px rgba(128, 128, 128, 0.247) solid;
+        }
+        .btncoupon{
+            width: 90px;
+            border: none;
+            height:35px;
+            border-radius: 20px;
+            background-color: #43b9fd;
+            color: white;
+            text-decoration: none;
+        }
+        .btncoupon:hover{
+            text-decoration: underline;
+        }
+        .btncoupon:active{
+            border:5px rgba(128, 128, 128, 0.247) solid;
+        }
+        .dashed{
+            border-top: 1px dashed gray;
+        }
+        .totalamount{
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+
+        }
+        .totalamount #calall2{
+            color: #F85E09;
+        }
+        .middlebtn{
+            display: flex;
+            justify-content: center;
+        }
+        .confirmpay{
+            width: 80%;
+            border: none;
+            height:35px;
+            border-radius: 20px;
+            background-color: #43b9fd;
+            color: white;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+        .confirmpay:hover{
+            text-decoration: underline;
+        }
+        .confirmpay:active{
+            border:5px rgba(128, 128, 128, 0.247) solid;
+        }
+        .no-order-cfp{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .no-order-cfp img{
+            width: 160px;
+            /* height: 272px; */
+        }
+        .no-order-cfp2{
+            width: 100%;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .code-incorrect{
+            color: red;
+            font-size: 12px;
+            width: 100%;
+            margin-top: 3px;
+            padding-left: 12px;
+        }
+        .code-incorrect2{
+            color: red;
+            font-size: 12px;
+            width: 100%;
+            margin-top: 3px;
+            padding-left: 12px;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+        </style>
+</head>
+<body>
+    <%-include("navbar")%>
+    <div class="justify">
+        <div class="detail-box-head">
+            <div class="head">
+                <% let a = 0;  %>
+                <% Object.values(userinfo[3]).forEach(function(item){ %>
+                    <% a++ %>
+                <% }) %>
+                <p id="p1">สรุปรายการสั่งซื้อ <span class="sum">(&nbsp;<span><%-a%></span>&nbsp;รายการ )</span></p>
+                <p id="p2"><a class="p2link" href="/all-course/page/1">เลือกคอร์สเพิ่ม</a><span class="material-symbols-outlined">navigate_next</span></p>
+            </div>
+            <div class="head-no">
+            </div>
+        </div>
+
+        <div class="detail-box">
+            <div class="order-detail">
+                <% if(!(userinfo[4])){ %> 
+                    <% Object.values(userinfo[3]).forEach(function(item){ %>
+                        <div class="item-order">
+                            <div class="img">
+                                <img src="/HabitzoneImage/ggggg.png" alt="">
+                            </div>
+                            <div class="detail">
+                                <p class="ncourse">
+                                    <span id="n1"><%=item.name%></span>
+                                    <a href="/delete2/<%=item.courseid%>"><span id="n2" class="material-symbols-outlined">delete</span></a>
+                                </p>
+                                <p class="detail-c-item">
+                                    <span class="detA">
+                                        <span class="detAin"><img src="/HabitzoneImage/gura.jpg" alt=""><span class="nbsp">ครูผู้สอน : <%=item.teacher%></span></span>
+                                        <span class="detAin"><span id="clock" class="material-symbols-outlined">timer</span><span class="nbsp">150.00 ชั่วโมง (ชม.เรียน 2 เท่า)</span></span>
+                                    </span>
+                                    <span class="priceN">
+                                        <span class='stycolor2'>จำนวน&nbsp;&nbsp;:&nbsp;&nbsp;1</span>
+                                        <span class='stycolor'>฿<span id="cal"> <%=item.price%></span>.00</span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    <% }) %>
+                <% }else { %>
+                  <div class="no-order-cfp">
+                    <img src="/HabitzoneImage/gura4.jpg" alt="">
+                        <p id="btkp1">ยังไม่มีคอร์สเรียนในตะกร้าสินค้า </p>
+                        <p id="btkp2">เพิ่มคอร์สเรียน <span>เข้ามาในตะกร้าสินค้าของคุณ</span></p>
+                  </div>
+                <% }%>
+            </div>
+
+
+            <div class="payment-detail" action="">
+                <div class="inbox">
+                    <p class="pay">ใบเสร็จคำสั่งซื้อ</p>
+                    <hr>
+                    <div class="order-detail-list">
+                        <div class="payhead"><span>ชื่อรายการ/สินค้า</span><span class="spann">ราคา</span></div>
+                        <% let i = 1;  %>
+                        <% if(!(userinfo[4])){ %> 
+                            <% Object.values(userinfo[3]).forEach(function(item){ %>
+                                <div class="payhead2"><span class="p2b1"><%-i%>. <%=item.name%> </span><span class="p2b2">฿ <%=item.price%>.00</span></div>
+                                <% i++ %>
+                            <% }) %>
+                        <% }else { %>
+                            <div class="no-order-cfp2">
+                                <p id="btkp2">ยังไม่มีสินค้าในตะกร้า</p>
+                            </div>
+                        <% }%> 
+                    </div>
+
+                    <div class="margin"></div>
+                    <hr class="dashed">
+                    <p class="pay">กรอกโค้ดส่วนลด</p>
+                    <div class="payheadcode">
+                        <span class="p2b1"></span>
+                    </div>
+                    <div class="chead">
+                        <% if(codestatus){ %> 
+                            <form action="/confirm-payment" method="get">
+                                <input class="coupon" type="text" placeholder='กรอกโค้ดส่วนลด' name="discount" value="<%=discountdoc[0]%>" readonly>
+                                <button class="btncoupon2" type="submit">เลิกใช้โค้ดนี้</button>
+                            </form>
+                        <% }else { %>
+                            <form action="/getdiscountcode" method="post">
+                                <input class="coupon" type="text" placeholder='กรอกโค้ดส่วนลด' name="discount" value="">
+                                <button class="btncoupon" type="submit">ยืนยัน</button>
+                            </form>
+                        <% }%> 
+
+                        
+                    </div>
+                    <p class="code-incorrect">*โค้ดส่วนลดไม่ถูกต้อง</p>
+
+                    <div class="margin"></div>
+                    <hr class="dashed">
+                    <div class="margin"></div>
+                    <div>รวม <%-a%> รายการ</div>
+                    <div class="payhead2"><span class="p2b1">ยอดรวม</span><span class="p2b2"><span id="calall"></span></span></div>
+                    <div class="payhead2"><span class="p2b1">ส่วนลดรวม</span><span class="p2b2">฿ 0.00</span></div>
+                    <div class="margin"></div>
+                    <hr>
+                    <div class="margin"></div>
+                    <div class="totalamount"><span>ยอดรวมสุทธิ</span><span id="calall2">฿ 0.00</span></div>
+                    <div class="margin"></div>
+                    <div class="middlebtn">
+                        <button class="confirmpay">ยืนยันการชำระเงิน</button>
+                    </div>
+                    <div class="margin"></div>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+    <script src="/js/confirmpay.js"></script>
+    <%-include("loginbox")%>
+    <%-include("footer")%>
+
+
+</body>
+</html>

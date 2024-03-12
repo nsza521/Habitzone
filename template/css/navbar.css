@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Mali&display=swap');
+*{
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@media (min-width:1200px){
+     .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 700,
+        'GRAD' -25,
+        'opsz' 48;
+        font-size: 25px;
+    }
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    .headflexbox{
+        height: 70px;
+        display: flex;
+        background-color: #fff;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: sticky;
+        top:0px;
+        z-index: 3;
+        box-shadow:1px 1px 3px rgba(128, 128, 128, 0.5);
+    }
+    .hf1{
+        display: flex;
+        flex-direction: row;
+        flex:1;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid rgba(228, 228, 228, 0.514);
+    }
+    .hlogoimg{
+        width: 200px;
+    }
+    .hf2{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex:4;
+        justify-content: center;
+    }
+    .hf2 a{
+        text-decoration: none;
+        font-size: 17px;
+        color: rgb(71, 71, 71);
+    }
+    .hf2 div{
+        width:155px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 150ms ease color;
+    }
+    .hf2 div:hover{
+        color: rgb(0, 110, 255);
+    }
+    .hf2 span{
+        font-size: 25px;
+        margin: 0 5px;
+    }
+    .hf2 p{
+        margin: 0 5px;
+    }
+    .headinfo{
+        text-decoration: none;
+    }
+    .hf3{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex:1;
+        justify-content: start;
+        align-items: center;
+        border-left: 2px solid rgba(228, 228, 228, 0.514);
+    }
+    .hf3 button{
+        height: 33px;
+        border-radius: 20px;
+        margin: 0 10px;
+    }
+    .hlogin{
+        width:90px;
+        border: 1px rgb(81, 181, 248) solid;
+        background-color: rgba(81, 181, 248, 0.925);
+        color: white;
+        box-shadow: 1px 1px 3px  rgba(81, 181, 248, 0.356),
+        -1px -1px 3px  rgba(81, 181, 248, 0.356);
+    }
+    .hlogin:hover{
+        text-decoration: underline;
+    }
+    .hregister{
+        width:90px;
+        border: 1px rgb(81, 181, 248) solid;
+        background-color: rgba(81, 181, 248, 0.925);
+        box-shadow: 1px 1px 3px  rgba(81, 181, 248, 0.356),
+        -1px -1px 3px  rgba(81, 181, 248, 0.356);
+    }
+    .hregister:hover{
+        text-decoration: underline;
+        color: white;
+    }
+    .hregister a{
+        color: white;
+        text-decoration: none;
+    }
+    .headflexbox2{
+        height: 50px;
+        display: flex;
+        background-color: #fff;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        box-shadow:1px 1px 2px rgba(128, 128, 128, 0.4);
+        z-index: 3;
+    }
+    .headflexbox2 div{
+        width:100px;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: border-bottom ease 50ms;
+    }
+    .headflexbox2 #i1{
+        border-bottom: 3px solid rgb(81, 181, 248);
+        color: rgb(0, 110, 255);
+    }
+    .headflexbox2 div:hover{
+        border-bottom: 3px solid rgb(81, 181, 248);
+    }
+    .stylelink-sub:link{
+        text-decoration: none;
+        color: rgb(71, 71, 71);
+    }
+    .stylelink-sub:visited{
+        color: rgb(71, 71, 71);
+        text-decoration: none;
+    }   
+    .stylelink-sub:hover{
+        color:cornflowerblue;
+        text-decoration: none;
+        background-color: rgba(128, 128, 128, 0.1);
+    }
+    .loginsuccess{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 150ms ease color;
+    }
+    .loginimage{
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        margin: 5px;
+        border:2px solid rgb(81, 181, 248);
+        box-shadow: 1px 1px 3px gray;
+    }
+    .loginsuccess p{
+        text-transform: uppercase;
+        margin: 5px;
+    }
+    .loginsuccess:hover{
+        color: rgb(0, 110, 255);
+    }
+    .profileoverview{
+        position: fixed;
+        display: flex;
+        width: 100%;
+        z-index: 2;
+        -webkit-user-select: none;
+        max-height: 0;
+    }
+    
+    .profileoverview .povd1{
+       flex:1;
+       max-height: 0;
+    }
+    .profileoverview .povd2{
+        flex:4;
+       max-height: 0;
+
+     }
+    .povd3{
+        flex:1;
+        border: 2px solid  rgb(228, 228, 228);  
+        height: 200px;
+        background-color: #fff;
+        position: relative;
+        bottom:0px;
+        transition: all 300ms ease;
+    }
+    .povd32{
+        flex:1;
+        border: 2px solid  rgb(228, 228, 228);  
+        height: 200px;
+        background-color: #fff;
+        position: relative;
+        bottom:200px;
+        transition: all 500ms ease;
+    }
+    .profileoverview .profile{
+        background-color: rgba(81, 181, 248, 0.349);
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profileoverview .profile div{
+        font-size: 13px;
+        color: rgb(0, 0, 0);
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left:10px;
+    }
+    .profileoverview .profile div .phead{
+        font-weight:600;
+    }
+    .profileoverview .profile div a{
+       text-decoration: none;
+       color: black;
+    }
+    .profileoverview .profile div a span{
+        font-size: 14px;
+        padding-left: 5px;
+        position: relative;
+        top:3px
+     }
+    .profileoverview .profile div a:hover{
+        text-decoration: underline;
+     }
+    .loginimage2{
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        margin: 5px;
+        border:2px solid rgb(47, 165, 243);
+        box-shadow: 1px 1px 3px gray;
+    }
+    .profilebtn{
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profilebtn div{
+        width: 60%;
+        font-size: 14px;
+    }
+    .profilebtn span{
+        font-size: 15px;
+        margin: 0px 5px;
+        position: relative;
+        top:3px
+    }
+    .profilebtn div a{
+       color: black;
+       text-decoration: none;
+    }
+    .profilebtn div a:hover{
+        text-decoration: underline;
+     }
+
+}

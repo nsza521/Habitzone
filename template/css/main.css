@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Mali&display=swap');
+*{
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@media (min-width:1200px){
+    html{
+        scroll-behavior: smooth;
+    }
+    .idontknowhowtodojustwanttojustify{
+        margin-top: 2px;
+        display: flex;
+        height: 600px;
+        max-width: 100%;
+        justify-content: center;
+        background-color: rgb(248, 248, 248);
+    }
+    .slideimg{
+        margin:30px 0;
+        max-width:960px;
+        height:540px;
+        text-align:center;
+        display: flex;
+    }
+    .slideimg img{
+        width:960px;
+        height:540px;
+        border-radius: 30px;
+    }
+    #simg1{
+        position: relative;
+        right: 0px;
+        opacity: 1;
+        transition: opacity ease-in-out 800ms;
+    }
+    #simg2{
+        position: relative;
+        right: 960px;
+        opacity: 0;
+        transition: opacity ease-in-out 800ms;
+    }
+    #simg3{
+        position: relative;
+        right: 1920px;
+        opacity: 0;
+        transition: opacity ease-in-out 800ms;
+    }
+    .recommend{
+        font-size: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .fire{
+        width: 50px;
+    }
+    .recommend2 a{
+        font-size: 16px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #F85E09;
+    }
+    .recommend2 span{
+        font-size: 18px;
+        position: relative;
+        top: 1px
+    }
+    
+    .coutboxhead{
+        margin:30px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .para{
+        width: 1200px;
+        height: 50px;
+        position: relative;
+        top: 13px;
+    }
+    
+    .coutbox{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .cbox{
+        width: 1200px;
+        height:380px;
+        display: flex;
+        flex-direction: row;
+    }
+    .cbr1{
+        width: 270px;
+        height:350px;
+        margin:20px 12.5px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.432),-1px -1px 3px rgba(128, 128, 128, 0.432);
+    }
+    .cbr1 a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .cbr1-picture{
+        width:100%;
+        height: 151.875px;
+        box-shadow:0px 1px 3px rgba(128, 128, 128, 0.432);
+    }
+    .cimgmain{
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .contentincourse{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: 20px;
+    }
+    .unfill span{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin: 10px 0 0 0;
+        position: relative;
+        right:10px;
+        z-index: 2;
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+        
+    }   
+    .namecourse{
+        width:90%;
+        font-size: 14px;
+        min-height: 40px;
+        max-height: 40px;
+    }
+    .teachercourse{
+        display: flex;
+        width: 90%;
+        font-size: 12px;
+        color: rgb(80, 80, 80);
+        align-items: center;
+        margin-top: 5px;
+    }
+    .teachercourse img{
+        display: flex;
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+    }
+    .teachercourse p{
+        margin-left: 5px;
+    }
+    .hours{
+        display: flex;
+        width: 90%;
+        font-size: 12px;
+        color: rgb(80, 80, 80);
+        align-items: center;
+        margin-top: 3px;
+    }
+    .hours span{
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }   
+    .pricecourse{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        padding-left: 8px;
+    }
+    .pricecourse p{
+        color: #F85E09;
+        font-size: 16px;
+        margin-right: 2px;
+    }
+    
+    .pricecourse span{
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+    .coursebtn{
+        margin-top: 10px;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .coursebtn .detailacbtn{ 
+        width: 70%;
+    }
+    .coursebtn button{
+        width: 100%;
+        height: 38px;
+        border-radius: 10px;
+        border: none;
+        background-color:  #6ac6fc;
+        color: #ffffff;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .coursebtn button:hover{
+        background-color:  #43b9fd;
+        text-decoration: underline;
+        box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.5);
+    }
+    .coursebtn a{
+        text-decoration: none;
+    }
+    .coursebtn .cartac{
+        height: 38px;
+        width: 38px;
+        border: 2px solid  #6ac6fc;
+        border-radius: 10px;
+        color: rgb(0, 195, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .coursebtn .cartac:hover{
+        border: 2px solid  #43b9fd;
+        color:  #43b9fd;
+        box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.5);
+    }
+    .coursebtn .cartac span{
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+    .conT{
+        border: 1px black solid;
+        width: 100%;
+        height:650px
+    }
+}
+    

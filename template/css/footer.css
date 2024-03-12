@@ -1,0 +1,127 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(87, 87, 87);
+}
+.footerin{
+    width: 1200px;
+    height: 450px;
+    display: flex;
+    justify-content: space-around;
+}
+.Fsection1{
+    color: white;
+    flex:1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.s1{
+    width: 70%;
+    flex:2.3;
+    padding-top: 30px;
+    padding-left: 20px;
+    -webkit-user-select: none;
+
+}
+.s2{
+    flex:3;
+    width: 100%;
+    padding-left: 50px;
+    font-size: 18px;
+}
+.s2 a{
+    text-decoration: none;
+    color:rgb(182, 240, 248);
+}
+.s3{
+    flex:1.5;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.s3 .circle{
+    width: 65px;
+    border-radius: 65px;
+    height: 65px;
+    background-color: white;
+    margin:0 5px;
+    -webkit-user-select: none;
+
+}
+.s3 .circle:hover{
+   opacity: 0.9;
+}
+.logoimgfooter{
+    width: 50px;
+    border-radius: 65px;
+    height: 50px;
+    margin-top: 7.5px;
+    margin-left: 7.5px;
+}
+.Fsection2{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Fsection2 .boxft{
+    width: 70%;
+    height: 115px;
+    margin:10px 0;
+
+}
+.Fsection2 .boxft div{
+    color: rgb(182, 240, 248);
+    font-size: 18px;
+    align-self: start;
+}
+.Fsection2 .boxft p{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-top: 5px;
+}
+.flexthis{
+    display: flex;
+    flex-direction: row;
+}
+.flexthis span{
+    color: #ffffff;
+    padding: 5px 0;
+
+}
+.flexthis p{
+    position: relative;
+    bottom: 6px;
+    left: 5px;
+    padding: 5px 0;
+}
+.Fsection3{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    color: rgb(180, 180, 180);
+    align-items: center;
+    justify-content: center;
+
+}
+.Fsection3 .boxF3{
+    height: 250px;
+    width: 70%;
+}
+.Fsection3 .moreinfos{
+    color: rgb(182, 240, 248);
+    font-size: 18px;
+    align-self: start;
+    margin-bottom: 10px;
+}
+.Fsection3 ul li{
+    margin:3px 0;
+}
+.Fsection3 ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}

@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Mali&display=swap');
+*{
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@media (min-width:1200px){
+    .loginbox2{
+        -webkit-user-select: none;
+        visibility:hidden;
+        position: fixed;
+        width:0px;
+        height:0px;
+    }
+  
+    .loginbox{
+        visibility: visible;
+        position: fixed;
+        border: 1px white solid;
+        top:50%;
+        left:50%;
+        width:480px ;
+        height:570px;
+        transform: translate(-50%,-50%);
+        background-color:rgb(255, 255, 255 , 0.9);
+        z-index: 6;
+        border-radius: 10px;
+        box-shadow: 0.5px 0.5px 5px 1px gray;
+        transition: width 80ms ease-out 0s,height 80ms ease-out 0s;
+    }
+    .headinloginbox{
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        margin-top: 25px;
+    }
+    .headinloginboxP{
+        float: left;
+        color: red;
+        font-size: 11px;
+        position: relative;
+        left:50px;
+        top:4px;
+        visibility: hidden;
+    }
+    .headinloginboxPshow{
+        float: left;
+        color: red;
+        font-size: 11px;
+        position: relative;
+        left:50px;
+        top:4px;
+        visibility: visible;
+    }
+    .inputusername{
+        width:80%;
+        height:40px;
+        border: 1px gray solid;
+        border-radius: 5px;
+        margin-left: 10%;
+        padding-left: 15px;
+        margin-top: 4px;
+    }
+    .inputpassword{
+        width:80%;
+        height:40px;
+        border: 1px gray solid;
+        border-radius: 5px;
+        margin-left: 10%;
+        margin-top: 4px;
+        padding-left: 15px;
+    }
+    .labellogin{
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    .forgotpassword{
+        margin-top: 43px;
+        font-size: 11px;
+        width:80%;
+        margin-left: 10%;
+        text-align: right;
+    }
+    .linkforgot{
+        text-decoration: none;
+        color: gray;
+    }
+    .linkforgot:hover{
+        color:rgb(118, 36, 250)
+    }
+    .submitlogin{
+        width:80%;
+        height:40px;
+        border: 1px gray solid;
+        border-radius: 20px;
+        margin-left: 10%;
+        margin-top: 4px;
+        padding-left: 15px;
+    }
+    .loginwithgogle{
+        width:80%;
+        height:40px;
+        border-radius: 20px;
+        margin-left: 10%;
+        margin-top: 4px;
+        padding-left: 15px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 1px 1px 2px 1px gray;
+    }   
+    .loginwithgogle2{
+        display: flex;
+        margin-top: 11px;
+        padding:0px
+    }
+    .goguy{
+        width:20px;
+        margin-right: 5px;
+    }
+    .orrr{
+        text-align: center;
+        font-size: 10px;
+        margin-top: 5px ;
+    }
+    #usermargin{
+        margin-top: 40px;
+    }
+    .noaccount{
+        margin-top: 50px;
+        font-size: 13px;
+        width:80%;
+        margin-left: 10%;
+        text-align: center;
+    }
+    .noaccountnoline{
+        text-decoration: none;
+    }
+    .overlaynoactive{
+        visibility: hidden;
+        z-index:-1;
+    }
+    .overlay{
+        visibility:visible;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom: 0;
+        background-color:rgb(0, 0, 0 ,0.5) ;
+        z-index: 5;
+    }
+    .exitloginbutton{
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 45px;
+        font-weight:lighter;
+        position: relative;
+        bottom:545px;
+        left:450px
+    }
+    .exitloginbutton:hover{
+        opacity: 0.7;
+    }
+    .buttonhideshow{
+        border:none;
+        background: none;
+        position: relative;
+        right:32px;
+        top:4px;
+    }
+    .buttonhideshow2{
+        border:none;
+        background: none;
+        position: relative;
+        bottom:29px;
+        left:401px
+    }
+    .eye{
+        visibility:show;
+    }
+    .eyeremove{
+        visibility: hidden;
+    }
+    .eye:hover{
+        opacity: 0.7;
+    }
+    .eyehd{
+        visibility:hidden;
+    }
+    .eyenothd{
+        visibility:show;
+    }
+    
+    .eyeslash:hover{
+        opacity: 0.7;
+    }
+    .contract{
+        display: flex;
+        flex-direction: column;
+        padding:5px;
+        position: fixed;
+        right:5px;
+        bottom:5px;
+        z-index:4
+    }
+    .logocontract{
+        width:52px;
+        border-radius: 255555px;
+        margin: 5px 0;
+        box-shadow: 2px 2px 5px gray;
+    }
+    .logocontract:hover{
+        opacity: 0.7;
+    }
+
+
+    /* cart */
+    .cartout{
+        display: flex;
+        flex-direction: column;
+        padding:5px;
+        position: fixed;
+        left:15px;
+        bottom:15px;
+        background-color:white;
+        border: 2px rgb(116, 177, 247) solid;
+        border-radius: 25252552525px;
+        box-shadow: 2px 2px 5px gray;
+        transition: 700ms ease left;
+        z-index: 3;
+    }
+    .cart{
+        width:50px;
+        -webkit-user-select: none;
+        border-radius: 2545145614514751451px;
+    }
+    .cartoutactive{
+        display: flex;
+        flex-direction: column;
+        padding:5px;
+        position: fixed;
+        left:340px;
+        bottom:15px;
+        background-color:white;
+        border: 2px rgb(116, 177, 247) solid;
+        border-radius: 25252552525px;
+        z-index: 3;
+        box-shadow: 2px 2px 5px gray;
+    }
+    .cart:hover{
+        opacity: 0.7;
+    }
+    .cartleftnoactive{
+        position: fixed;
+        left:-326px;
+        top:0px;
+        width: 325px;
+        height: 100%;
+        border-right:1px rgba(128, 128, 128, 0.425) solid;
+        background-color: #fff;
+        z-index: 3;
+        transition: 700ms ease left;
+        box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.199);
+    }
+    .cartleft{
+        position: fixed;
+        left:0px;
+        top:0px;
+        width: 325px;
+        height: 100%;
+        z-index: 3;
+        background-color: #fff;
+        -webkit-user-select: none;
+    }
+    /* cart head */
+    .headtakla{
+        width:100%;
+        height: 12%;
+        display: flex;
+        flex-direction: column;
+        color: rgb(58, 58, 58);
+    }
+    .headtakla div{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 19px;
+    } 
+    .headtakla #closebtn2{
+        width:100%;
+        text-align: right;
+        position: relative;
+        top:5px;
+        right:5px;
+    } 
+    .headtakla #closebtn2:hover{
+        opacity: 0.5;
+    } 
+    /* cart body */
+    .bodytakla{
+        width:100%;
+        height: 70%;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .bodytakla .bodytaklacontent{
+        height: 350px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bodytakla .bodytaklacontent img{
+        width: 150px;
+    }
+    #btkp1{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    #btkp2{
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    #btkp2 span{
+        font-size: 13px;
+        color: rgb(0, 110, 255);
+    }
+    .bodytakla .bodytaklacontent button{
+        width: 125px;
+        height: 35px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color:  #6ac6fc;
+        margin-top: 20px;
+    }
+    .courseintakla{
+        width: 100%;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3px 0px;
+        border-bottom: 1px gray dashed;
+    }
+    .courseintakla .imgtakla{
+        width: 85px;
+        height: 85px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 3px gray;
+    }
+    .courseintakla .detail{
+        width:200px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 15px;
+    }
+    .courseintakla .detail img{
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+    }
+    .courseintakla .detail p{
+       font-size: 13px;
+    }
+    .courseintakla .detail span{
+        margin-top: 5px;
+        color: #F85E09;
+     }
+     .courseintakla a{
+        text-decoration:none;
+    }
+    .sensei{
+        display: flex;
+        align-items: center;
+    }
+    .sensei p{
+        margin-left: 5px;
+    }
+    #bin{
+        height: 70px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        font-size: 20px;
+        color: gray;
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+    #bin:hover{
+        color: #F85E09;
+        opacity: 0.8;
+    }
+    /* cart footer */
+    .footertakla{
+        width:100%;
+        height: 18%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(58, 58, 58);
+    }
+    .footertakla a {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-decoration: none;
+    }
+    .footertakla a button{
+        width: 75%;
+        height: 35px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color:  #6ac6fc;
+        margin-top: 5px;
+    }   
+    #priceall{
+        color: #F85E09;
+    }
+}

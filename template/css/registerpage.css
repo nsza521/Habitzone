@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Mali&display=swap');
+*{
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+input{
+    font-weight: 100;
+}
+ body{
+    background-image: url('/HabitzoneImage/snow.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center right;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    background-color: white;
+    width: 700px;
+    height:850px;
+    z-index: 1;
+    opacity: 0.9;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: -0.5px -0.5px 10px rgba(0, 0, 0, 0.274),
+    0.5px 0.5px 10px rgba(0, 0, 0, 0.192);
+}
+form div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+.info{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info .p1{
+    font-size: 25px;
+    font-weight:500;
+}
+.info .p2{
+    margin-bottom: 40px;
+}
+/*  */
+.nameandsurname div{
+    width: 35%;
+}
+.nameandsurname label{
+    position: relative;
+    top:7px;
+    margin-right:10px;
+}
+.nameandsurname input{
+    border-radius: 10px;
+    width: 82%;
+    height: 40px;
+    padding-left: 15px;
+    border:1px solid gray
+}
+
+/*  */
+.inputemail label{
+    position: relative;
+    top:7px;
+    margin-right:10px;
+}
+.inputemail input{
+    border-radius: 10px;
+    width: 65%;
+    height: 40px;
+    padding-left: 15px;
+    border:1px solid gray
+}
+/*  */
+.inputpassword label{
+    position: relative;
+    top:7px;
+    margin-right:10px;
+    position: relative;
+    right:9px
+}
+.inputpassword input{
+    border-radius: 10px;
+    width: 65%;
+    height: 40px;
+    padding-left: 15px;
+    border:1px solid gray;
+    position: relative;
+    right:10px
+}
+/*  */
+.confirm label{
+    position: relative;
+    top:7px;
+    margin-right:10px;
+    position: relative;
+    right:30px
+}
+.confirm input{
+    border-radius: 10px;
+    width: 65%;
+    height: 40px;
+    padding-left: 15px;
+    border:1px solid gray;
+    position: relative;
+    right:30px
+}
+/*  */
+.numberinfo div{
+    width: 100%;
+}
+.numberinfo label{
+    position: relative;
+    top:7px;
+    margin-right:10px;
+    position: relative;
+    right:10px
+}
+.numberinfo input{
+    border-radius: 10px;
+    width: 65%;
+    height: 40px;
+    padding-left: 15px;
+    border:1px solid gray;
+    position: relative;
+    right:10px
+}
+/*  */
+.address label{
+    position: relative;
+    top:7px;
+    margin-right:10px;
+    position: relative;
+    left:1px
+}
+.address textarea{
+    border-radius: 10px;
+    width: 64%;
+    height: 100px;
+    padding-left: 15px;
+    padding-top: 8px;
+    border:1px solid gray;
+    position: relative;
+    left:1px;
+}
+.checkboxprivacy{
+    width: 86%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.checkboxprivacy input{
+    transform: scale(1.5);
+}
+input[type=checkbox]{
+    accent-color: rgb(255, 0, 0);
+    mix-blend-mode: multiply;
+}
+a{
+    text-decoration: none;
+}
+.checkboxprivacy p{
+    position: relative;
+    left:10px;
+    bottom:1px;
+    font-weight: 100;
+}
+.checkboxprivacy a:link{
+    color: red;
+}
+.checkboxprivacy a:visited{
+    color: red;
+}
+.btnhide{
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    border: 0px solid gray;
+    margin-top: 10px;
+    color: gray;
+    border: 1px solid rgba(128, 128, 128, 0.253);
+}
+.btnshow{
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    border: 0px solid gray;
+    margin-top: 10px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px rgb(252, 52, 52);
+}
+.boxpleaseinput{
+    height: 36px;
+    display: flex;
+    justify-content: start;
+    position: relative;
+    left:150px;
+    width: 65%;
+}
+#forposition{
+    margin-left: 170px;
+}
+
+.pleaseinputhide1{
+    visibility: hidden;
+}
+.pleaseinputhide2{
+    visibility: hidden;
+}
+.pleaseinputhide3{
+    visibility: hidden;
+}
+.pleaseinputhide4{
+    visibility: hidden;
+}
+.pleaseinputhide5{
+    visibility: hidden;
+}
+.pleaseinputhide6{
+    visibility: hidden;
+}
+.pleaseinputshow1{
+    visibility: visible;
+}
+.pleaseinputshow2{
+    visibility: visible;
+}
+.pleaseinputshow3{
+    visibility: visible;
+}
+.pleaseinputshow4{
+    visibility: visible;
+}
+.pleaseinputshow5{
+    visibility: visible;
+}
+.pleaseinputshow6{
+    visibility: visible;
+}
+.tooshortpasswordhide{
+    position: relative;
+    right:134px;
+    visibility: hidden;
+}
+.tooshortpasswordshow{
+    position: relative;
+    right:134px;
+    visibility: visible;
+}
+.wrapperregister{
+    background-color: black;
+    opacity: 0.6;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+video{
+    position: fixed;
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}

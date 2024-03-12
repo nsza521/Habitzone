@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHabitZone Register</title>
+    <link rel="stylesheet" href="/css/registerpage.css">
+    <link rel="icon" href="/HabitzoneImage/gura.jpg">
+</head>
+<body>
+    <!-- <video autoplay muted loop id="myVideo">
+        <source src="/video/snow.mp4" type="video/mp4">
+    </video> -->
+    <div class="wrapperregister">
+
+    </div>
+    <div class="box">
+
+        <form action="/getuserdata" method="post">
+            <div class="info">
+               <span class="p1">สมัครสมาชิก</span>
+               <span class="p2">กรุณากรอกข้อมูลของท่านให้ถูกต้องและครบถ้วน</span>
+            </div>
+            <div class="nameandsurname">
+                <div >
+                    <label for="">ชื่อ&nbsp;</label>
+                    <input id='nameinput' placeholder="ป้อนชื่อของท่าน"  type="text" name="name">
+                </div>
+                <div>
+                    <label for="">นามสกุล</label>
+                    <input id='surnameinput' placeholder="ป้อนนามสกุลของท่าน" class="form-control" type="text" name="surname">
+                </div>
+            </div>
+            <div class="boxpleaseinput">
+                <p class="pleaseinputhide1" style="color: red; font-size: 12px;">*กรุณาระบุชื่อของท่าน</p>
+                <p class="pleaseinputhide2" id="forposition" style="color: red; font-size: 12px;">*กรุณาระบุนามสกุลของท่าน</p>
+            </div>
+
+            <div>
+                <div class="inputemail">
+                    <label for="">อีเมล</label>
+                    <input id='emailinput' placeholder="ป้อนอีเมลของท่าน"class="form-control" type="text" name="email">
+                </div>
+            </div>
+            <div class="boxpleaseinput">
+                <p class="pleaseinputhide3" style="color: red; font-size: 12px;">*กรุณาระบุอีเมลของท่าน</p>
+            </div>
+            
+            <div>
+                <div class="inputpassword">
+                    <label for="">รหัสผ่าน</label>
+                    <input id='passwordinput' placeholder="รหัสผ่าน ( 8-16 ตัวอักษร และ มีตัวเลข )" type="password" name="password">
+                </div>
+            </div>
+            <div class="boxpleaseinput">
+                <p class="pleaseinputhide4" style="color: red; font-size: 12px;">*กรุณาระบุรหัสผ่านของท่าน</p>
+                <p id='tspw'class="tooshortpasswordhide" style="color: red; font-size: 12px;">*รหัสผ่านต้องมีความยาว 8-16 ตัวอักษรและมีตัวเลข</p>
+            </div>
+
+            <div>
+                <div class="confirm">
+                    <label for="">ยืนยันรหัสผ่าน</label>
+                    <input id='confirmpasswordinput' placeholder="ยืนยันรหัสผ่าน" type="password" name="confirmpassword">
+                </div>
+            </div>
+            <div class="boxpleaseinput">
+                <p class="pleaseinputhide5" style="color: red; font-size: 12px;">*รหัสผ่านของผ่านไม่ตรงกับรหัสผ่านด้านบน</p>
+            </div>
+
+            <div  class="numberinfo">
+                <div>
+                    <label for="">โทรศัพท์</label>
+                    <input id='phoneinput' type="tel" placeholder="เบอร์โทรศัพท์" name="phone">
+                </div>
+            </div>
+            <div class="boxpleaseinput">
+                <p class="pleaseinputhide6" id="forposition2"   style="color: red; font-size: 12px;">*กรุณาระบุเบอร์โทรศัพท์</p>
+            </div>
+
+            <div>
+                <div class="address">
+                    <label for="">ที่อยู่</label>
+                    <textarea  id="" cols="30" rows="10" placeholder="*ที่อยู่สำหรับการจัดส่งหนังสือ (ใส่ทีหลังได้)" name="address"></textarea>
+                </div>
+            </div>
+
+            <div id="clickcheckbox" class="checkboxprivacy"> 
+                <input  type="checkbox" name="fav" id="checkboxcheck" name="confirmtermandconditionofuse">
+                <p>ยอมรับ<a href="/other/terms-and-conditions-of-use">ข้อตกลง</a> และ <a href="/other/privacy-policy">เงื่อนไขความเป็นส่วนตัว</a></p>
+            </div>
+            <div >
+                <button id="myBtn" class="btnhide" type="submit">ยืนยันการสมัคร</button>
+            </div>
+        </form>
+    </div>
+    <script src="/js/registerapp.js"></script>
+</body>
+</html>
